@@ -1,0 +1,122 @@
+$color-body: #666
+$color-header: #574943
+$color-green: #56ba5b
+$color-grey: #f1f1f2
+$color-grey-border: #d5d5d5
+$color-sales-text: #7a695a
+$color-footer-bg: #ececec
+$color-footer-text: #a1a1a1
+
+$base-font: "Arial", sans-serif
+$font-size-base: 14
+
+@mixin font-size-em($size)
+  font-size: $size / $font-size-base * 1em
+
+
+body
+  margin: 0
+  padding: 0
+
+.email-container
+  font-family: $base-font
+  color: $color-body
+  font-size: 14 * 1px
+
+.email-header
+  background-color: $color-header
+  background-image: url("../img/bg.jpg")
+  background-position: left
+  color: white
+  padding-top: 30px
+
+.email-center
+  margin: auto
+  padding: 0 20px
+  max-width: 600px
+  text-align: center
+
+.email-logo
+  float: left
+
+.email-social-wrap
+  float: right
+  a
+    margin-left: 7px
+
+.email-header-top
+  text-transform: uppercase
+  letter-spacing: 1px
+  padding-top: 80px
+  padding-bottom: 80px
+  text-align: center
+  font-size: 24px
+  font-weight: 700
+  line-height: 34px
+  clear: both
+
+.email-button
+  display: inline-block
+  padding: 11px 50px
+  background-color: $color-green
+  border-radius: 5px
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: 1px
+  color: white
+  margin-bottom: 85px
+
+.email-teasers-wrap
+  background-color: $color-grey
+  border-bottom: 5px solid $color-grey-border
+  margin-top: -34px
+  padding: 34px 0 0
+
+.email-teaser-item
+  display: inline-block
+  width: 150px
+  vertical-align: top
+  padding: 0 20px 17px
+
+.email-sale-text
+  display: inline-block
+  text-transform: uppercase
+  margin: 45px 0 40px
+  font-weight: 400
+  letter-spacing: 2px
+  color: $color-sales-text
+  border: 1px solid $color-sales-text
+  padding: 15px 35px
+
+.email-products-wrap
+
+.email-product-item
+  display: inline-block
+  max-width: 250px
+  padding: 0 16px
+  border-bottom: 1px solid $color-grey-border
+  padding-bottom: 30px
+  margin-bottom: 30px
+  img
+    width: 100%
+
+.email-price
+  color: black
+  margin: 16px 0
+  font-size: 16px
+  font-weight: 700
+
+.email-button_product
+  background-color: $color-sales-text
+  margin-bottom: 0px
+  font-size: 12px
+  padding: 11px 40px
+
+.email-footer
+  text-align: center
+  padding: 20px 0
+  font-size: 12px
+  background-color: $color-footer-bg
+  color: $color-footer-text
+  a
+    color: $color-footer-text

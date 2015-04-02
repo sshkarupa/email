@@ -1,0 +1,56 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="css/style.css")
+
+  body
+    .email-container
+      .email-header
+        .email-center
+
+          .email-header-topline
+            a.email-logo(href="//site.com")
+              img(src="img/logo.png", alt="logo")
+
+            .email-social-wrap
+              a(href="#")
+                img(src="img/soc_twitter.png", alt="twitter")
+              a(href="#")
+                img(src="img/soc_vk.png", alt="Vk")
+              a(href="#")
+                img(src="img/soc_fb.png", alt="facebook")
+
+          .email-header-top.
+            Самое лучшее предложение<br>из всех, которые вы получали
+
+          a.email-button(href="#") Подробнее
+
+      .email-content
+        .email-center
+          .email-teasers-wrap
+            mixin teaser-item (text, img)
+              .email-teaser-item
+                img(src="img/icon_#{img}.png", alt="Alt")
+                p=text
+            +teaser-item ("У нас есть лапки", 1)
+            +teaser-item ("... и бумажные самолетики", 2)
+            +teaser-item ("Кроме того, у нас есть чемодан", 3)
+
+          .email-sale-text Заказывая сечас - получаете скидку
+
+          .email-products-wrap
+            mixin product-item (img, price, url)
+              .email-product-item
+                a(href="#{url}")
+                  img(src="img/items/#{img}.jpg", alt="Alt")
+                .email-price #{price} руб.
+                a.email-button.email-button_product(href="#{url}") Заказать
+            +product-item(1, "2000", '#')
+            +product-item(2, "2500", '#')
+            +product-item(3, "3000", '#')
+            +product-item(4, "3500", '#')
+
+      .email-footer ООО "Лучшее предложение"&nbsp;&nbsp;
+        a(href="#") Отписаться от рассылки
+
